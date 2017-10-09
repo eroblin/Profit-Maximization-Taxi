@@ -18,8 +18,13 @@ We build a variable to analyse the location of the different rides. They are mai
 Two types of model are used: decision tree, random forest.
 
 We have to define the different parameters of the models. To do so, we use the training set and the evolution of the error term. Here is an example with the decision tree in the situation 1 and when the profit is define as the total amount of the ride. On the train set, the minimum value of the error is reached when the length of the train is 7: this is the value we choose for this hyperparameter. 
+![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/error.png)
 
-To analyze the results, we compare the variables importance. The results are similar for the two different ways of defining the profit. Furthermore, in the first situation and for the first regression,the most important variable is the trip distance, then comes the trip time and finally the start time. When we explain these three variables, knowing the number of passengers in advance doesn't represent an advatange. The best way to maximise profit is to choose the right area (meaning the right latitude and longitude) to maiximise the trip distance and the trip time. In the second situation, the start time and the number of passengers don't have any impact on the profit.  The taxi has to choose the right area to maximise his trip time and trip distance and then consequently his profit. 
+To analyze the results, we compare the variables importance. The results are similar for the two different ways of defining the profit.
+Furthermore, in the first situation and for the first regression,the most important variable is the trip distance, then comes the trip time and finally the start time. The R square value in this case is 0.9179.
+![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/variables_importance.png)
+ When we explain these three variables, knowing the number of passengers in advance doesn't represent an advatange. The best way to maximise profit is to choose the right area (meaning the right latitude and longitude) to maiximise the trip distance and the trip time. In the second situation, the start time and the number of passengers don't have any impact on the profit.  The taxi has to choose the right area to maximise his trip time and trip distance and then consequently his profit. 
 With the random forest and in the two situations, the profit is mainly explained by the trip distance, itself explained by the longitude.
+![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/map.png)
 
 To represent our results, we compute trip distances only using longitude and latitude. This a way to represent where the taxi should go to maximise his chances to have a longer trip and then a more important profit. We compare this projections with the map of NYC. 
