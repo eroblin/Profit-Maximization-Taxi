@@ -26,6 +26,8 @@ Furthermore, in the first situation and for the first regression,the most import
 ![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/variables_importance.png)
  When we explain these three variables, knowing the number of passengers in advance doesn't represent an advatange. The best way to maximise profit is to choose the right area (meaning the right latitude and longitude) to maiximise the trip distance and the trip time. In the second situation, the start time and the number of passengers don't have any impact on the profit.  The taxi has to choose the right area to maximise his trip time and trip distance and then consequently his profit. 
 With the random forest and in the two situations, the profit is mainly explained by the trip distance, itself explained by the longitude.
+To represent our results, we compute trip distances only using longitude and latitude. This a way to represent where the taxi should go to maximise his chances to have a longer trip and then a more important profit. We compare this projections with the map of NYC. 
+
 ![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/map.png)
 
-To represent our results, we compute trip distances only using longitude and latitude. This a way to represent where the taxi should go to maximise his chances to have a longer trip and then a more important profit. We compare this projections with the map of NYC. 
+
