@@ -18,6 +18,7 @@ We build a variable to analyse the location of the different rides. They are mai
 Two types of model are used: decision tree, random forest.
 
 We have to define the different parameters of the models. To do so, we use the training set and the evolution of the error term. Here is an example with the decision tree in the situation 1 and when the profit is define as the total amount of the ride. On the train set, the minimum value of the error is reached when the length of the train is 7: this is the value we choose for this hyperparameter. 
+
 ![alt text](https://github.com/eroblin/Profit-Maximization-Taxi/blob/master/error.png)
 
 To analyze the results, we compare the variables importance. The results are similar for the two different ways of defining the profit.
