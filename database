@@ -1,0 +1,17 @@
+%pylab inline
+from fonctions import *
+
+
+ntot = 100000
+nrand=50000
+#Table with mondays from 1 am to 11 pm included. Y : profit as total amount / Z : tip/ X : explanatory variables
+X_tot,Y_tot,Z_tot = variables(1, 'Monday',1,23, ntot, nrand)
+
+for i in range(2,13):
+    X,Y,Z = variables(i, 'Monday',1,23, ntot, nrand)
+    X_tot =np.concatenate((X,X_tot))
+    Y_tot = np.concatenate((Y,Y_tot))
+    Z_tot = np.concatenate((Z,Z_tot))
+    print("We selected ",len(Y_tot), " rides yet.")
+                            
+print(X_tot.shape)
